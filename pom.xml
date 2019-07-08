@@ -3,14 +3,14 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.codenotfound</groupId>
-  <artifactId>jsf-primefaces-spring-security</artifactId>
+  <groupId>com.diti5</groupId>
+  <artifactId>projec-jsf</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>jsf-primefaces-spring-security</name>
-  <description>JSF PrimeFaces Spring Security Example</description>
-  <url>https://codenotfound.com/jsf-primefaces-spring-security-example.html</url>
+  <name>projec-jsf</name>
+  <description>PROJET JSF</description>
+  <url>https://anpcorp.sn</url>
 
   <parent>
     <groupId>org.springframework.boot</groupId>

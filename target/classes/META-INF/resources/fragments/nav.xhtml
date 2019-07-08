@@ -1,0 +1,43 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:sec="http://www.springframework.org/security/tags" xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+
+</h:head>
+<h:body>
+
+    <ui:composition>
+        <p:dock position="bottom">
+            <p:menuitem value="Accueil" icon="/static/img/home.png" url="/admin/dashbord.xhtml"/>
+            <p:menuitem value="Services" icon="/static/img/customer.png" url="/admin/service/index.xhtml"/>
+            <p:menuitem value="Roles" icon="/static/img/role.png" url="/admin/role/index.xhtml"/>
+            <p:menuitem value="Patients" icon="/static/img/patient.png" url="/admin/patient/index.xhtml"/>
+            <p:menuitem value="Utilisateur" icon="/static/img/user.png" url="/admin/utilisateur/index.xhtml"/>
+            <p:menuitem value="Consultation" icon="/static/img/consultation.png" url="/admin/consultation/index.xhtml"/>
+
+        </p:dock>
+
+        <!--head-->
+        <p:panel header="Hospital Application" style="margin: auto;">
+            <h:panelGrid columns="8" cellpadding="4" style="text-align: center;margin: auto">
+                <p:button value="Accueil" onclick="window.location.href='/admin/dashbord.xhtml';return false" />
+                <p:button value="Services" onclick="window.location.href='/admin/service/index.xhtml';return false" />
+                <p:button value="Roles" onclick="window.location.href='/admin/role/index.xhtml';return false" />
+                <!-- <h:outputLink value="/admin/dashbord.xhtml">Go to this site!</h:outputLink>-->
+                <p:button value="Patients" onclick="window.location.href='/admin/patient/index.xhtml';return false" />
+                <p:button value="Utilisateur" onclick="window.location.href='/admin/utilisateur/index.xhtml';return false" />
+                <p:button value="Consultation" onclick="window.location.href='/admin/consultation/index.xhtml';return false" />
+                <p:button style="background: red;color: white" value="Decoonexion" onclick="window.location.href='/logout';return false" />
+            </h:panelGrid>
+        </p:panel>
+        <!--head-->
+    </ui:composition>
+
+</h:body>
+</html>

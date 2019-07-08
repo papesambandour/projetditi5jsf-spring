@@ -49,7 +49,7 @@ public class Utilisateur {
     }
 
     @ManyToMany(cascade = {
-            CascadeType.MERGE,
+            CascadeType.REFRESH
     },fetch=FetchType.EAGER)
     @JoinTable(name = "utilisateur_role",
             joinColumns = @JoinColumn(name = "utilisateur_id"),

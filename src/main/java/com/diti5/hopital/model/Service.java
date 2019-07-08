@@ -14,7 +14,8 @@ public class Service {
 	private int id;
 	@Column(length=50)
 	private String libelle;
-	@OneToMany(mappedBy="service")
+	@OneToMany(mappedBy="service",cascade = {
+			CascadeType.MERGE})
 	//@JsonManagedReference
 	//@JsonIgnore
 	private List<Utilisateur> utilisateur ;
