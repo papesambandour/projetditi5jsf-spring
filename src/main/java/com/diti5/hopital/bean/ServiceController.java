@@ -35,6 +35,26 @@ public class ServiceController {
       return "/admin/service/index?faces-redirect=true&error=true";
     }
   }
+ public String editUser(Service service){
+    try {
+      this.service = service ;
+      return "/admin/service/edit";
+    }catch (Exception e)
+    {
+      System.out.println(e.getMessage());
+      return "/admin/service/index?faces-redirect=true&error=true";
+    }
+  }
+ public String deleteUser(Service service){
+    try {
+      serviceDOA.delete(service);
+      return "/admin/service/index?faces-redirect=tru&success=true";
+    }catch (Exception e)
+    {
+      System.out.println(e.getMessage());
+      return "/admin/service/index?faces-redirect=true&error=true";
+    }
+  }
 
   public Service getService() {
     return service;

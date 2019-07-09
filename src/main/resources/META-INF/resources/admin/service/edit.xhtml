@@ -3,8 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:sec="http://www.springframework.org/security/tags" xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:sec="http://www.springframework.org/security/tags" xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <h:head>
 
@@ -31,26 +30,11 @@
 
           <h:outputText value="Nom du service " />
           <p:inputText value="#{serviceController.service.libelle}" id="libele" />
-          <p:commandButton value="Ajouter" action="#{serviceController.saveService}" />
+          <h:inputHidden value="#{serviceController.service.id}" id="id" />
+          <p:commandButton value="Mettre a jour" action="#{serviceController.saveService}" />
         </h:panelGrid>
       </p:panel>
     </h:form>
-
-    <p:dataTable var="service" value="#{serviceController.services}">
-      <p:column headerText="Id">
-        <h:outputText value="#{service.id}" />
-      </p:column>
-
-      <p:column headerText="Nom du service">
-        <h:outputText value="#{service.libelle}" />
-      </p:column>
-      <p:column headerText="Action">
-        <h:form >
-          <h:commandButton style="margin: 5px" styleClass="btn btn-warning btn-sm" action="#{serviceController.editUser(service)}"  value="Editer"/>
-          <h:commandButton style="margin: 5px" styleClass="btn btn-danger btn-sm" action="#{serviceController.deleteUser(service)}"  value="Supprimer"/>
-        </h:form>
-      </p:column>
-    </p:dataTable>
   </div>
 
   <!--FOOTER JS-->

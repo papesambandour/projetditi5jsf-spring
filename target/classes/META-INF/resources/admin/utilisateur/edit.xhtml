@@ -27,50 +27,51 @@
     <div >
       <h1 class="text-center" >USER </h1>
 
-      <h:form styleClass="form" style="margin: auto; width: 80%; padding: 10px; border-radius: 15px 0px 15px 0px ">
+      <h:form id="frmAdduser" styleClass="form" style="margin: auto; width: 80%; padding: 10px; border-radius: 15px 0px 15px 0px ">
         <div class="row">
           <div class="form-group row col-sm-6 ">
+            <h:inputHidden value="#{userController.user.id}" id="id" />
             <label for="matricule" class="col-4 col-form-label">Matricule</label>
             <div class="col-8">
               <h:inputText id="matricule" required="true" value="#{userController.user.matricule}" a:placeholder="Matricule"  styleClass="form-control" />
             </div>
           </div>
-          <div  class="form-group row col-sm-6 ">
+          <!--<div  class="form-group row col-sm-6 ">
             <label for="img" class="col-sm-4 col-form-label">Photo</label>
             <div class="col-sm-8">
               <h:inputText id="img" required="true" value="#{userController.user.img}" a:placeholder="Photo"  styleClass="form-control" />
             </div>
-          </div>
-        </div>
-        <div class="row">
+          </div>-->
           <div  class="form-group row col-sm-6 ">
-            <label for="prenom" class="col-sm-4 col-form-label">Firs tName</label>
+            <label for="prenom" class="col-sm-4 col-form-label">Prenom</label>
             <div class="col-sm-8">
-              <h:inputText id="prenom" required="true" value="#{userController.user.prenom}" a:placeholder="first Name"  styleClass="form-control" />
-            </div>
-          </div>
-          <div  class="form-group row col-sm-6 ">
-            <label for="nom" class="col-sm-4 col-form-label">Last Name</label>
-            <div class="col-sm-8">
-              <h:inputText id="nom" required="true" value="#{userController.user.nom}" a:placeholder="last Name"  styleClass="form-control" />
+              <h:inputText id="prenom" required="true" value="#{userController.user.prenom}" a:placeholder="Prenom"  styleClass="form-control" />
             </div>
           </div>
         </div>
         <div class="row">
+
+          <div  class="form-group row col-sm-6 ">
+            <label for="nom" class="col-sm-4 col-form-label">Nom</label>
+            <div class="col-sm-8">
+              <h:inputText id="nom" required="true" value="#{userController.user.nom}" a:placeholder="Nom"  styleClass="form-control" />
+            </div>
+          </div>
           <div  class="form-group row col-sm-6 ">
             <label for="username" class="col-sm-4 col-form-label">Username</label>
             <div class="col-sm-8">
               <h:inputText id="username" required="true" value="#{userController.user.username}" a:placeholder="Username"  styleClass="form-control" />
             </div>
           </div>
+        </div>
+        <div class="row">
+
           <div  class="form-group row col-sm-6 ">
             <label for="password" class="col-sm-4 col-form-label">Password</label>
             <div class="col-sm-8">
               <h:inputText id="password" required="true" value="#{userController.user.password}" a:placeholder="Password"  styleClass="form-control" />
             </div>
           </div>
-        </div>
-        <div class="row">
           <div  class="form-group row col-sm-6 ">
             <label for="service" class="col-sm-4 col-form-label">Service</label>
             <div class="col-sm-8">
@@ -80,6 +81,9 @@
               </h:selectOneMenu>
             </div>
           </div>
+        </div>
+        <div class="row">
+
           <div  class="form-group row col-sm-6 ">
             <label for="role" class="col-sm-4 col-form-label">Role</label>
             <div class="col-sm-8">
@@ -91,10 +95,11 @@
         </div>
 
         <div class="row text-center" style="width: 100% ; margin: auto">
-          <p:commandButton value="Mettre a jour" action="#{userController.updateUser}" styleClass="btn btn-succes" style="margin: auto"  />
+          <p:commandButton value="Mettre a jour" action="#{userController.addUser}" styleClass="btn btn-primary" style="margin: auto"  />
         </div>
 
       </h:form>
+
 
       <hr/>
     </div>

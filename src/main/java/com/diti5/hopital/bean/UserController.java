@@ -7,6 +7,7 @@ import com.diti5.hopital.model.Role;
 import com.diti5.hopital.model.Service;
 import com.diti5.hopital.model.Utilisateur;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
@@ -15,6 +16,7 @@ import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
 import javax.inject.Named;
+import javax.jws.soap.SOAPBinding;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -44,6 +46,8 @@ public class UserController implements Serializable  {
     private ServiceDOA serviceDOA;
     @Autowired
     private RoleDAO roleDAO;
+    @Autowired
+    private BCryptPasswordEncoder encoder ;
 
     public Utilisateur getUser() {
         return user;
@@ -129,13 +133,17 @@ public class UserController implements Serializable  {
 
     public String updateUser(){
         try {
+
             user.setService(serviceDOA.findById(user.getService().getId()).get());
             List<Role> tmpRole = new ArrayList<Role>();
             for (Integer idRole: listRolesId
             ) {
                 tmpRole.add(roleDAO.findById(idRole).get());
             }
+            user.setListeRoles(tmpRole);
+            System.out.println("ID_USER"+user.getId());
             utilisateurDAO.save(user);
+
             initUser();
             return "/admin/utilisateur/index?faces-redirect=true&success=true";
         }catch (Exception e){
@@ -156,6 +164,8 @@ public class UserController implements Serializable  {
                 tmpRole.add(roleDAO.findById(idRole).get());
             }
             user.setListeRoles(tmpRole);
+            user.setPassword(encoder.encode(user.getPassword()));
+           // user.setUsername((user.getNom()+user.getMatricule()).toLowerCase());
             utilisateurDAO.save(user);
             System.out.println("Success!!!");
             user = new Utilisateur() ;

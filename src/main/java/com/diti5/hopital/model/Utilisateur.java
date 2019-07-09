@@ -49,7 +49,7 @@ public class Utilisateur {
     }
 
     @ManyToMany(cascade = {
-            CascadeType.REFRESH
+            CascadeType.MERGE,CascadeType.PERSIST
     },fetch=FetchType.EAGER)
     @JoinTable(name = "utilisateur_role",
             joinColumns = @JoinColumn(name = "utilisateur_id"),
@@ -58,7 +58,7 @@ public class Utilisateur {
   // @JsonManagedReference
     private List<Role> listeRoles;
     @ManyToOne (cascade = {
-            CascadeType.MERGE
+            CascadeType.MERGE,CascadeType.PERSIST
     },fetch=FetchType.EAGER)
 
     private Service service;

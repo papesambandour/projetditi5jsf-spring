@@ -3,7 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui"
-      xmlns:sec="http://www.springframework.org/security/tags" xmlns:ui="http://java.sun.com/jsf/facelets">
+      xmlns:sec="http://www.springframework.org/security/tags" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <h:head>
 
@@ -29,8 +30,7 @@
         <h:panelGrid columns="2" cellpadding="4">
 
           <h:outputText value="Nom du service " />
-          <p:inputText value="#{serviceController.service.libelle}" />
-
+          <p:inputText value="#{serviceController.service.libelle}" id="libele" />
           <p:commandButton value="Ajouter" action="#{serviceController.saveService}" />
         </h:panelGrid>
       </p:panel>
@@ -43,6 +43,12 @@
 
       <p:column headerText="Nom du service">
         <h:outputText value="#{service.libelle}" />
+      </p:column>
+      <p:column headerText="Action">
+        <h:form >
+          <h:commandButton style="margin: 5px" styleClass="btn btn-warning btn-sm" action="#{serviceController.editUser(service)}"  value="Editer"/>
+          <h:commandButton style="margin: 5px" styleClass="btn btn-danger btn-sm" action="#{serviceController.deleteUser(service)}"  value="Supprimer"/>
+        </h:form>
       </p:column>
     </p:dataTable>
   </div>

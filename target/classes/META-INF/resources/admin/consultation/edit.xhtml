@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+<h:body>
+    <ui:composition template="../template.xhtml">
+
+        <ui:define name="left">
+            <h:outputLabel value="You are in the Left Section"/>
+        </ui:define>
+
+        <ui:define name="content">
+            <b:panel title="Consultations" look="success">
+                <h:form id="form">
+                    <b:dataTable id="consultations" var="cons" value="#{consultationEditBean.consultations}">
+                        <b:dataTableColumn value="#{cons.date}" />
+                        <b:dataTableColumn value="#{cons.patient.numDossier}" label="Dossier" />
+                        <b:dataTableColumn value="#{cons.patient.nom} #{cons.patient.prenom}" label="Patient" />
+                        <b:dataTableColumn value="#{cons.service.libelle}" label="Service" />
+                        <b:dataTableColumn value="#{cons.user.name}" label="Médecin" />
+                        <b:dataTableColumn value="#{cons.commentaire}" />
+                        <b:dataTableColumn value="#{cons.effectuee}" />
+                        <b:dataTableColumn value="#{cons.prescription}" />
+                        <!--<b:commandButton value="Modifier" look="warning" size="lg" process="@this"
+                                         actionListener="#{consultationEditBean.editConsultation(cons)}" />
+                        <b:commandButton value="Supprimer" look="danger" size="lg" process="@this"
+                                         actionListener="#{consultationEditBean.deleteConsultation}" />-->
+                        <b:dataTableColumn>
+                            <b:commandButton value="Modifier" icon="edit" look="warning"
+                                             action="#{consultationEditBean.edit(cons.id)}">
+                                <!--<f:ajax execute="@this" render="@form" />-->
+                            </b:commandButton>
+                            <b:commandButton value="Supprimer" iconAwesome="trash" look="danger"
+                                             action="#{consultationBean.delete(cons)}">
+                                <f:ajax execute="@this" render="@form" />
+                            </b:commandButton>
+                        </b:dataTableColumn>
+                    </b:dataTable>
+                </h:form>
+            </b:panel>
+            
+
+
+        </ui:define>
+
+    </ui:composition>
+</h:body>
+</html>
