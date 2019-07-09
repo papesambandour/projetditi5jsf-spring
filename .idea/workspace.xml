@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="863a1de3-a741-44dd-81b3-d6ede8968e8e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/edit.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/ConsultationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/ConsultationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/edit.xhtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/model/Consultation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/model/Consultation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/consultation/consultation.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/consultation/edit.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/diti5/hopital/bean/ConsultationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/diti5/hopital/bean/ConsultationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/consultation/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/consultation/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/diti5/hopital/model/Consultation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/diti5/hopital/model/Consultation.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,35 +22,40 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/index.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="946">
-              <caret line="71" column="121" selection-start-line="71" selection-start-column="121" selection-end-line="71" selection-end-column="121" />
+            <state relative-caret-position="389">
+              <caret line="77" column="120" selection-start-line="77" selection-start-column="120" selection-end-line="77" selection-end-column="120" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/ConsultationController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="41" column="22" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2548#2549#0" expanded="true" />
+                <element signature="e#2583#2584#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/ConsultationController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/edit.xhtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
-              <folding>
-                <element signature="e#2107#2108#0" expanded="true" />
-                <element signature="e#2142#2143#0" expanded="true" />
-                <element signature="e#2204#2205#0" expanded="true" />
-                <element signature="e#2252#2253#0" expanded="true" />
-                <element signature="e#2294#2295#0" expanded="true" />
-                <element signature="e#2325#2326#0" expanded="true" />
-                <element signature="e#2380#2381#0" expanded="true" />
-                <element signature="e#2420#2421#0" expanded="true" />
-                <element signature="e#2462#2463#0" expanded="true" />
-                <element signature="e#2493#2494#0" expanded="true" />
-                <element signature="e#2548#2549#0" expanded="true" />
-                <element signature="e#2588#2589#0" expanded="true" />
-                <element signature="e#2640#2641#0" expanded="true" />
-                <element signature="e#2676#2677#0" expanded="true" />
-                <element signature="e#2746#2747#0" expanded="true" />
-                <element signature="e#2796#2797#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="158">
+              <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/utilisateur/index.xhtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="433">
+              <caret line="136" column="21" lean-forward="true" selection-start-line="130" selection-start-column="10" selection-end-line="136" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -86,6 +91,7 @@
       <find>AAA</find>
       <find>Photo</find>
       <find>consultationEditBean</find>
+      <find>--</find>
     </findStrings>
     <replaceStrings>
       <replace>customer</replace>
@@ -144,10 +150,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/resources/fragments/footer.xhtml" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/utilisateur/index.xhtml" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/resources/fragments/nav.xhtml" />
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/edit.xhtml" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/consultation.xhtml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/diti5/hopital/model/Consultation.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/index.xhtml" />
         <option value="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/ConsultationController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/edit.xhtml" />
       </list>
     </option>
   </component>
@@ -168,6 +175,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -225,6 +233,16 @@
               <item name="projet-jsf" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="diti5" type="462c0819:PsiDirectoryNode" />
+              <item name="hopital" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projet-jsf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projet-jsf" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -261,6 +279,26 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="patient" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projet-jsf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projet-jsf" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="utilisateur" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="projet-jsf" type="b2602c69:ProjectViewProjectNode" />
+              <item name="projet-jsf" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="fragments" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -276,7 +314,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -287,7 +324,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562664261594" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1562664267629" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -297,22 +334,22 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin" />
-      <recent name="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/service" />
-      <recent name="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/utilisateur" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean" />
-      <recent name="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/user" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.diti5.hopital.bean" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin" />
       <recent name="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/service" />
       <recent name="$PROJECT_DIR$/src/main/resources/META-INF/resources/static/img" />
       <recent name="$PROJECT_DIR$/src/main/resources/META-INF/resources/consultation" />
       <recent name="$PROJECT_DIR$/src/main/resources/META-INF/resources/static/css" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.diti5.hopital.bean" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation" />
+      <recent name="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin" />
+      <recent name="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/service" />
+      <recent name="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/utilisateur" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -360,18 +397,19 @@
       <workItem from="1562554389609" duration="4516000" />
       <workItem from="1562573906708" duration="868000" />
       <workItem from="1562618340881" duration="10859000" />
-      <workItem from="1562661284822" duration="2349000" />
+      <workItem from="1562661284822" duration="2448000" />
+      <workItem from="1562712903852" duration="2146000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33217000" />
+    <option name="totallyTimeSpent" value="35462000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16666667" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16881259" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -593,13 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/diti5/hopital/model/Consultation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="23" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/service/edit.xhtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -645,30 +676,6 @@
             <element signature="e#1678#1679#0" expanded="true" />
             <element signature="e#1712#1713#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/PatientController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="e#1571#1572#0" expanded="true" />
-            <element signature="e#1601#1602#0" expanded="true" />
-            <element signature="e#1648#1649#0" expanded="true" />
-            <element signature="e#1686#1687#0" expanded="true" />
-            <element signature="e#1728#1729#0" expanded="true" />
-            <element signature="e#1759#1760#0" expanded="true" />
-            <element signature="e#1814#1815#0" expanded="true" />
-            <element signature="e#1854#1855#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/diti5/hopital/model/Patient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -755,59 +762,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/edit.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/diti5/hopital/model/Patient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        <state relative-caret-position="108">
+          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/utilisateur/index.xhtml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/PatientController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1247">
-          <caret line="149" selection-start-line="149" selection-end-line="149" />
+        <state relative-caret-position="164">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/diti5/hopital/model/Consultation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
           <folding>
-            <element signature="n#h:form#0;n#div#0;n#div#0;n#h:body#0;n#html#0;n#!!top" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/patient/index.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="55" column="25" lean-forward="true" selection-start-line="51" selection-start-column="12" selection-end-line="55" selection-end-column="25" />
+        <state relative-caret-position="173">
+          <caret line="79" column="13" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="79" selection-end-column="13" />
+          <folding>
+            <element signature="n#h:form#0;n#div#0;n#h:body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/utilisateur/index.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="433">
+          <caret line="136" column="21" lean-forward="true" selection-start-line="130" selection-start-column="10" selection-end-line="136" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/index.xhtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="71" column="121" selection-start-line="71" selection-start-column="121" selection-end-line="71" selection-end-column="121" />
+        <state relative-caret-position="389">
+          <caret line="77" column="120" selection-start-line="77" selection-start-column="120" selection-end-line="77" selection-end-column="120" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/ConsultationController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="35" column="42" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+        <state relative-caret-position="140">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="16" selection-end-line="41" selection-end-column="22" />
           <folding>
-            <element signature="e#2107#2108#0" expanded="true" />
-            <element signature="e#2142#2143#0" expanded="true" />
-            <element signature="e#2204#2205#0" expanded="true" />
-            <element signature="e#2252#2253#0" expanded="true" />
-            <element signature="e#2294#2295#0" expanded="true" />
-            <element signature="e#2325#2326#0" expanded="true" />
-            <element signature="e#2380#2381#0" expanded="true" />
-            <element signature="e#2420#2421#0" expanded="true" />
-            <element signature="e#2462#2463#0" expanded="true" />
-            <element signature="e#2493#2494#0" expanded="true" />
+            <element signature="imports" expanded="true" />
             <element signature="e#2548#2549#0" expanded="true" />
-            <element signature="e#2588#2589#0" expanded="true" />
-            <element signature="e#2640#2641#0" expanded="true" />
-            <element signature="e#2676#2677#0" expanded="true" />
-            <element signature="e#2746#2747#0" expanded="true" />
-            <element signature="e#2796#2797#0" expanded="true" />
+            <element signature="e#2583#2584#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/edit.xhtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
         </state>
       </provider>
     </entry>

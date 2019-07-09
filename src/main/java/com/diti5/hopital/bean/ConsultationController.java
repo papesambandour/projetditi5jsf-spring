@@ -39,6 +39,17 @@ public class ConsultationController {
       services = serviceDOA.findAll();
   }
 
+  public String update(){
+    try {
+        consultation.setService(serviceDOA.findById(consultation.getService().getId()).get());
+        consultationDAO.save(consultation);
+        return "/admin/consultation/index?faces-redirect=true&succes=true";
+    }catch (Exception e)
+    {
+      System.out.println(e.getMessage());
+      return "/admin/consultation/index?faces-redirect=true&error=true";
+    }
+  }
   public String save(){
     try {
         consultation.setService(serviceDOA.findById(consultation.getService().getId()).get());

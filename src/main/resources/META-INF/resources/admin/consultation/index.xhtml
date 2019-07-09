@@ -26,18 +26,18 @@
 
     <div class="container" style="margin-top: 50px">
         <b:panel title="Fiche Consultation" look="success">
-            <b:form id="add" horizontal="true">
+            <b:form id="add" horizontal="true" styleClass="form" style="margin: auto; width: 80%; padding: 10px; border-radius: 15px 0px 15px 0px ">
                 <p:growl id="growl" showDetail="true" sticky="true" />
 
                 <h:inputHidden value="#{consultationController.consultation.id}" />
-                <b:selectOneMenu value="#{consultationController.consultation.service.id}"  label="Service:" colMd="3" labelColMd="2" required="true">
+                <h:selectOneMenu value="#{consultationController.consultation.service.id}"  label="Service:" colMd="3" labelColMd="2" required="true">
                     <f:selectItem itemLabel="Séléctionner un service" itemValue="" />
                     <f:selectItems value="#{consultationController.services}" var="service" itemLabel="#{service.libelle}" itemValue="#{service.id}" />
-                </b:selectOneMenu>
-                <b:selectOneMenu value="#{consultationController.consultation.patient.id}"  label="Patient:" colMd="3" labelColMd="2" required="true">
+                </h:selectOneMenu>
+                <h:selectOneMenu value="#{consultationController.consultation.patient.id}"  label="Patient:" colMd="3" labelColMd="2" required="true">
                     <f:selectItem itemLabel="Séléctionner un patient" itemValue="" />
                     <f:selectItems value="#{consultationController.patients}" var="patient" itemLabel="#{patient.prenom} #{patient.nom}" itemValue="#{patient.id}" />
-                </b:selectOneMenu>
+                </h:selectOneMenu>
 
                 <p:outputLabel value="DETAILS CONSULTATION" style="font-weight: bold; font-size: large;" />
                 <p:calendar id="dateNaiss" showOn="button" navigator="true"
@@ -47,8 +47,7 @@
                 </p:calendar>
                 <b:inputTextarea value="#{consultationController.consultation.prescription}" label="Prescription:" colMd="6" labelColMd="2" />
                 <b:inputTextarea  value="#{consultationController.consultation.commentaire}" label="Commentaire:" colMd="6" labelColMd="2" />
-                <b:commandButton value="Enregistrer" look="info" size="lg" actionListener="#{consultationController.save}"
-                                  />
+                <b:commandButton value="Enregistrer" look="info" size="lg" actionListener="#{consultationController.save}"/>
             </b:form>
         </b:panel>
 
@@ -72,7 +71,15 @@
             <h:outputText value="#{consultation.utilisateur.prenom} #{consultationController.consultation.utilisateur.nom}" />
           </p:column>
 
-        </p:dataTable>-->
+        <p:column>
+            <f:facet name = "header">Action</f:facet>
+            <h:form >
+                <h:commandButton style="margin: 5px" styleClass="btn btn-warning btn-sm" action="#{consultationController.edit(consultation)}"  value="Editer"/>
+                <h:commandButton style="margin: 5px" styleClass="btn btn-danger btn-sm" action="#{consultationController.delete(consultation)}"  value="Supprimer"/>
+            </h:form>
+        </p:column>
+
+        </p:dataTable>
     </div>
 
     <!--FOOTER JS-->
