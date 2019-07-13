@@ -28,6 +28,7 @@ public class ServiceController {
     try {
       System.out.println(service.getLibelle());
       serviceDOA.save(service);
+        init();
       return "/admin/service/index?faces-redirect=true&succes=true";
     }catch (Exception e)
     {
@@ -48,7 +49,8 @@ public class ServiceController {
  public String deleteUser(Service service){
     try {
       serviceDOA.delete(service);
-      return "/admin/service/index?faces-redirect=tru&success=true";
+      init();
+      return "/admin/service/index?faces-redirect=true&succes=true";
     }catch (Exception e)
     {
       System.out.println(e.getMessage());

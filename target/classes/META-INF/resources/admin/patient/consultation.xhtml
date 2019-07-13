@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:sec="http://www.springframework.org/security/tags" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:a="http://bootsfaces.net/ui"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<h:head>
+
+  <!--HEADER CSS-->
+  <ui:insert name = "header" >
+    <ui:include src = "/fragments/header.xhtml" />
+  </ui:insert>
+  <!--HEADER CSS-->
+</h:head>
+
+<h:body>
+  <!--NAV-->
+  <ui:insert name = "nav" >
+    <ui:include src = "/fragments/nav.xhtml" />
+  </ui:insert>
+  <!--NAV-->
+
+
+
+  <div class="container" style="margin-top: 50px">
+    <h1>Les consultation du patient :  <h:outputLabel value="#{patientController.patient.prenom} #{patientController.patient.nom} " /> </h1>
+    <p:dataTable var="consultation" value="#{patientController.consultations}">
+
+      <p:column headerText="Date">
+        <h:outputText value="#{consultation.dateConsultation}" />
+      </p:column>
+
+      <p:column headerText="Prescription">
+        <h:outputText value="#{consultation.prescription}" />
+      </p:column>
+
+      <p:column headerText="Commentaire">
+        <h:outputText value="#{consultation.commentaire}" />
+      </p:column>
+      <p:column headerText="Service">
+        <h:outputText value="#{consultation.service.libelle}" />
+      </p:column>
+      <p:column headerText="Medecin">
+        <h:outputText value="#{consultation.utilisateur.prenom} #{consultation.utilisateur.nom}" />
+      </p:column>
+      <p:column headerText="Etat">
+        <h:outputText value="#{consultation.state}" />
+      </p:column>
+
+      <p:column>
+        <f:facet name = "header">Action</f:facet>
+        <h:form >
+          <h:commandButton style="margin: 5px" styleClass="btn btn-warning btn-sm" action="#{consultationController.edit(consultation)}"  value="Editer"/>
+          <h:commandButton style="margin: 5px" styleClass="btn btn-danger btn-sm" action="#{consultationController.delete(consultation)}"  value="Supprimer"/>
+        </h:form>
+      </p:column>
+
+    </p:dataTable>
+
+  </div>
+
+  <!--FOOTER JS-->
+  <ui:insert name = "footer" >
+    <ui:include src = "/fragments/footer.xhtml" />
+  </ui:insert>
+  <!--FOOTER JS-->
+</h:body>
+</html>

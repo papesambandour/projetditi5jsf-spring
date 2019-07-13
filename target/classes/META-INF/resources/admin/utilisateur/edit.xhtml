@@ -36,12 +36,7 @@
               <h:inputText id="matricule" required="true" value="#{userController.user.matricule}" a:placeholder="Matricule"  styleClass="form-control" />
             </div>
           </div>
-          <!--<div  class="form-group row col-sm-6 ">
-            <label for="img" class="col-sm-4 col-form-label">Photo</label>
-            <div class="col-sm-8">
-              <h:inputText id="img" required="true" value="#{userController.user.img}" a:placeholder="Photo"  styleClass="form-control" />
-            </div>
-          </div>-->
+
           <div  class="form-group row col-sm-6 ">
             <label for="prenom" class="col-sm-4 col-form-label">Prenom</label>
             <div class="col-sm-8">
@@ -67,9 +62,12 @@
         <div class="row">
 
           <div  class="form-group row col-sm-6 ">
-            <label for="password" class="col-sm-4 col-form-label">Password</label>
+            <label for="enabled" class="col-sm-4 col-form-label">Etat </label>
             <div class="col-sm-8">
-              <h:inputText id="password" required="true" value="#{userController.user.password}" a:placeholder="Password"  styleClass="form-control" />
+              <h:selectOneMenu value="#{userController.user.enabled}" required="true" id="enabled" styleClass="form-control" >
+                <f:selectItem itemValue="1" itemLabel="Activer"/>
+                <f:selectItem itemValue="0" itemLabel="Desactiver"/>
+              </h:selectOneMenu>
             </div>
           </div>
           <div  class="form-group row col-sm-6 ">
@@ -95,7 +93,7 @@
         </div>
 
         <div class="row text-center" style="width: 100% ; margin: auto">
-          <p:commandButton value="Mettre a jour" action="#{userController.addUser}" styleClass="btn btn-primary" style="margin: auto"  />
+          <p:commandButton value="Mettre a jour" action="#{userController.updateUser}" styleClass="btn btn-primary" style="margin: auto"  />
         </div>
 
       </h:form>

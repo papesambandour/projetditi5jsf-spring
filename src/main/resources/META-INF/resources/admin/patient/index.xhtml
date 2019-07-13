@@ -4,7 +4,8 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui"
       xmlns:sec="http://www.springframework.org/security/tags" xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:a="http://bootsfaces.net/ui">
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:a="http://bootsfaces.net/ui"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
 
 <h:head>
 
@@ -79,6 +80,25 @@
 
     </h:form>
 
+    <div id="message">
+      <c:if test="#{not empty param['error']  eq true}" >
+        <p:panel header="Hospital Application" style="margin: auto;" >
+          <h:panelGrid columns="10" cellpadding="4" style="text-align: center;margin: auto">
+            <h:outputText value="Action non effectué avec succès " style="color: red"/>
+          </h:panelGrid>
+        </p:panel>
+      </c:if>
+
+      <c:if test="#{not empty param['success']  eq true}">
+        <p:panel header="Hospital Application" style="margin: auto;">
+          <h:panelGrid columns="10" cellpadding="4" style="text-align: center;margin: auto">
+            <h:outputText value="Action effectué avec succès " style="color: green" />
+          </h:panelGrid>
+        </p:panel>
+      </c:if>
+    </div>
+    <hr/>
+
     <p:dataTable var="patient" value="#{patientController.patients}">
       <p:column headerText="Prenom">
         <h:outputText value="#{patient.prenom}" />
@@ -101,8 +121,9 @@
 
       <p:column headerText="Action">
         <h:form>
-          <h:commandButton style="margin: 5px" styleClass="btn btn-warning btn-sm" action="#{patientController.edit(patient)}"  value="Editer"/>
-          <h:commandButton style="margin: 5px" styleClass="btn btn-danger btn-sm" action="#{patientController.delete(patient)}"  value="Supprimer"/>
+          <h:commandButton style="margin: 5px" styleClass="btn btn-warning btn-sm" action="#{patientController.edit(patient)}"  value="Edit"/>
+          <h:commandButton style="margin: 5px" styleClass="btn btn-danger btn-sm" action="#{patientController.delete(patient)}"  value="Supp"/>
+          <h:commandButton style="margin: 5px" styleClass="btn btn-success btn-sm" action="#{patientController.consultation(patient)}"  value="Consultation"/>
         </h:form>
       </p:column>
     </p:dataTable>

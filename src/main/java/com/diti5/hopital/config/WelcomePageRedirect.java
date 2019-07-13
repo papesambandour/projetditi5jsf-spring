@@ -11,8 +11,16 @@ public class WelcomePageRedirect implements WebMvcConfigurer {
 
   @Override
   public void addViewControllers(ViewControllerRegistry registry) {
+    //DEFAULT
+    registry.addViewController("/")
+        .setViewName("forward:/admin/dashbord.xhtml");
     registry.addViewController("/admin")
-        .setViewName("forward:/admin/service/index.xhtml");
+        .setViewName("forward:/admin/dashbord.xhtml");
+    registry.addViewController("/medecin")
+        .setViewName("forward:/medecin/dashbord.xhtml");
+    registry.addViewController("/secretaire")
+        .setViewName("forward:/secretaire/dashbord.xhtml");
+
     registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
   }
 }

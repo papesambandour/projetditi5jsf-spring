@@ -98,6 +98,7 @@ public class UserController implements Serializable  {
         try {
             utilisateurDAO.delete(user);
             this.user = new Utilisateur();
+            initUser();
             return "/admin/utilisateur/index?faces-redirect=true&error=true";
         }catch (Exception e){
             e.printStackTrace();
@@ -120,29 +121,25 @@ public class UserController implements Serializable  {
         }
           return "/admin/utilisateur/index?faces-redirect=true&error=true";
     }
-    public String detailsUser(Utilisateur user){
-        try {
-            this.user = user ;
-
-            return "/admin/utilisateur/index?faces-redirect=true&error=true";
-        }catch (Exception e){
-            e.printStackTrace();
-        }
-        return "/admin/utilisateur/index?faces-redirect=true&error=true";
-    }
 
     public String updateUser(){
         try {
-
-            user.setService(serviceDOA.findById(user.getService().getId()).get());
+            Utilisateur tmpUser = utilisateurDAO.findById(user.getId()).get();
+            tmpUser.setService(serviceDOA.findById(user.getService().getId()).get());
             List<Role> tmpRole = new ArrayList<Role>();
-            for (Integer idRole: listRolesId
+            for (Integer idRole: this.listRolesId
             ) {
                 tmpRole.add(roleDAO.findById(idRole).get());
             }
-            user.setListeRoles(tmpRole);
+            tmpUser.setListeRoles(tmpRole);
+            tmpUser.setNom(user.getNom());
+            tmpUser.setPrenom(user.getPrenom());
+            tmpUser.setEnabled(user.getEnabled());
+            tmpUser.setChanged(user.getChanged());
+            tmpUser.setMatricule(user.getMatricule());
+            tmpUser.setUsername(user.getUsername());
             System.out.println("ID_USER"+user.getId());
-            utilisateurDAO.save(user);
+            utilisateurDAO.save(tmpUser);
 
             initUser();
             return "/admin/utilisateur/index?faces-redirect=true&success=true";
@@ -165,12 +162,12 @@ public class UserController implements Serializable  {
             }
             user.setListeRoles(tmpRole);
             user.setPassword(encoder.encode(user.getPassword()));
-           // user.setUsername((user.getNom()+user.getMatricule()).toLowerCase());
+            user.setUsername((user.getNom()+user.getMatricule()).toLowerCase());
+            user.setEnabled(1);
             utilisateurDAO.save(user);
-            System.out.println("Success!!!");
-            user = new Utilisateur() ;
-            System.out.println("aaaaa"+user.getNom());
-            return "/admin/utilisateur/index?faces-redirect=true&error=true";
+           // System.out.println("Success!!!");
+            initUser();
+            return "/admin/utilisateur/index?faces-redirect=true&success=true";
         }
         catch (Exception e){
             System.out.println("aaa"+  e.getMessage());

@@ -1,56 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-  xmlns:h="http://java.sun.com/jsf/html"
-  xmlns:p="http://primefaces.org/ui"
-  xmlns:sec="http://www.springframework.org/security/tags">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:sec="http://www.springframework.org/security/tags" xmlns:ui="http://java.sun.com/jsf/facelets">
 
 <h:head>
-  <title>PrimeFaces Hello World Example</title>
-  <h:outputStylesheet name="/css/main.css" />
+
+  <!--HEADER CSS-->
+  <ui:insert name = "header" >
+    <ui:include src = "/fragments/header.xhtml" />
+  </ui:insert>
+  <!--HEADER CSS-->
 </h:head>
 
 <h:body>
+  <!--NAV-->
+  <ui:insert name = "nav" >
+    <ui:include src = "/fragments/nav.xhtml" />
+  </ui:insert>
+  <!--NAV-->
 
-  <div class="authorization-div">
-    <sec:authorize access="hasRole('MEDECIN')">
-      <p:outputLabel value="You have the USER role" />
-    </sec:authorize>
-    <sec:authorize access="hasRole('ADMIN')">
-      <p:outputLabel value="You have the ADMIN role" />
-    </sec:authorize>
-    <sec:authorize access="hasRole('SECRETAIRE')">
-      <p:outputLabel value="You have the ADMIN role" />
-    </sec:authorize>
+
+
+  <div class="container" style="margin-top: 50px">
+    <h1>BIENVENUE DANS VOTRE APPLICATION : ESPACE ADMIN</h1>
   </div>
 
-  <h:form>
-    <p:panel header="PrimeFaces Hello World Example">
-      <h:panelGrid columns="2" cellpadding="4">
-
-        <h:outputText value="First Name: " />
-        <p:inputText value="#{helloWorld.firstName}" />
-
-        <h:outputText value="Last Name: " />
-        <p:inputText value="#{helloWorld.lastName}" />
-
-        <p:commandButton value="Submit" update="greeting"
-          oncomplete="PF('greetingDialog').show()" />
-      </h:panelGrid>
-    </p:panel>
-
-    <p:dialog header="Greeting" widgetVar="greetingDialog"
-      modal="true" resizable="false">
-      <h:panelGrid id="greeting" columns="1" cellpadding="4">
-        <h:outputText value="#{helloWorld.showGreeting()}" />
-      </h:panelGrid>
-    </p:dialog>
-  </h:form>
-
-  <h:form onsubmit="this.action='#{request.contextPath}/logout';"
-    class="logout-form">
-    <p:commandButton value="Logout" ajax="false" />
-  </h:form>
-
+  <!--FOOTER JS-->
+  <ui:insert name = "footer" >
+    <ui:include src = "/fragments/footer.xhtml" />
+  </ui:insert>
+  <!--FOOTER JS-->
 </h:body>
 </html>

@@ -4,7 +4,8 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui"
       xmlns:sec="http://www.springframework.org/security/tags" xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:a="http://bootsfaces.net/ui">
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:a="http://bootsfaces.net/ui"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
 
 <h:head>
 
@@ -35,12 +36,7 @@
               <h:inputText id="matricule" required="true" value="#{userController.user.matricule}" a:placeholder="Matricule"  styleClass="form-control" />
             </div>
           </div>
-          <!--<div  class="form-group row col-sm-6 ">
-            <label for="img" class="col-sm-4 col-form-label">Photo</label>
-            <div class="col-sm-8">
-              <h:inputText id="img" required="true" value="#{userController.user.img}" a:placeholder="Photo"  styleClass="form-control" />
-            </div>
-          </div>-->
+
           <div  class="form-group row col-sm-6 ">
             <label for="prenom" class="col-sm-4 col-form-label">Prenom</label>
             <div class="col-sm-8">
@@ -99,6 +95,28 @@
 
       </h:form>
 
+     <div id="message">
+       <c:if test="#{not empty param['error']  eq true}" >
+         <p:panel header="Hospital Application" style="margin: auto;" >
+           <h:panelGrid columns="10" cellpadding="4" style="text-align: center;margin: auto">
+             <h:outputText value="Action non effectué avec succès " style="color: red"/>
+           </h:panelGrid>
+         </p:panel>
+       </c:if>
+
+       <c:if test="#{not empty param['success']  eq true}">
+         <p:panel header="Hospital Application" style="margin: auto;">
+           <h:panelGrid columns="10" cellpadding="4" style="text-align: center;margin: auto">
+             <h:outputText value="Action effectué avec succès " style="color: green" />
+           </h:panelGrid>
+         </p:panel>
+       </c:if>
+     </div>
+
+
+
+
+
       <hr/>
 
       <div class="row" style="width: 80%; text-align: center; margin: auto">
@@ -111,22 +129,37 @@
           </h:column>
 
           <h:column>
-            <f:facet name = "header">First Name</f:facet>
+            <f:facet name = "header">Nom</f:facet>
             #{user.nom}
           </h:column>
 
           <h:column>
-            <f:facet name = "header">Last Name</f:facet>
+            <f:facet name = "header">Prenom</f:facet>
             #{user.prenom}
           </h:column>
 
           <h:column>
-            <f:facet name = "header">username</f:facet>
+            <f:facet name = "header">Username</f:facet>
             #{user.username}
+          </h:column>
+          <h:column>
+            <f:facet name = "header">Etat</f:facet>
+            <h:outputLabel rendered="#{ user.enabled eq 1}">
+              Active
+            </h:outputLabel>
+            <h:outputLabel rendered="#{ user.enabled eq 0}">
+              Desactiver
+            </h:outputLabel>
           </h:column>
           <h:column>
             <f:facet name = "header">Service</f:facet>
             #{user.service.libelle}
+          </h:column>
+          <h:column>
+            <f:facet name = "header">Roles</f:facet>
+            <ui:repeat var="role" value="#{user.listeRoles}" varStatus="rolem">
+              #{role.libelle} |
+            </ui:repeat>
           </h:column>
           <h:column>
             <f:facet name = "header">Action</f:facet>

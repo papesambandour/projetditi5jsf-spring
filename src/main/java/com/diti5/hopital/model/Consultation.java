@@ -17,20 +17,20 @@ public class Consultation {
 	@Type(type="text")
 	private String commentaire;
 	private String prescription;
-	@Column(length = 10)
+	@Column(length = 20)
 	private String state;
 	@ManyToOne (cascade = {
-			CascadeType.MERGE
+			CascadeType.PERSIST,CascadeType.MERGE
 	},fetch=FetchType.EAGER)
 
 	private Patient patient;
 	@ManyToOne (cascade = {
-			CascadeType.MERGE
+			CascadeType.PERSIST,CascadeType.MERGE
 	},fetch=FetchType.EAGER)
 
 	private Service service;
 	@ManyToOne (cascade = {
-			CascadeType.MERGE
+			CascadeType.PERSIST,CascadeType.MERGE
 	},fetch=FetchType.EAGER)
 	private Utilisateur utilisateur;
 	public Consultation() {}

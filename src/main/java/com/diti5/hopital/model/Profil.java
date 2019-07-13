@@ -10,7 +10,7 @@ public class Profil {
     public String prenom   ;
     public String nom  ;
     public String matricule ;
-
+    public Profil(){}
     public Profil(int id, String username, String passwordNew, String passwordNewConfirm, String prenom, String nom, String matricule) {
         this.id = id;
         this.username = username;

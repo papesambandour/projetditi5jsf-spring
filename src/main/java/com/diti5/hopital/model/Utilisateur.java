@@ -33,23 +33,15 @@ public class Utilisateur {
     private int changed;
     @Column(length=100)
     private String prenom;
-    @Column(length=255,nullable = true)
-    private String img;
+
     @Column(length=20)
     private String nom;
     @Column(length=100,unique = true)
     private String matricule;
 
-    public String getImg() {
-        return img;
-    }
-
-    public void setImg(String img) {
-        this.img = img;
-    }
 
     @ManyToMany(cascade = {
-            CascadeType.MERGE,CascadeType.PERSIST
+            CascadeType.PERSIST,CascadeType.MERGE
     },fetch=FetchType.EAGER)
     @JoinTable(name = "utilisateur_role",
             joinColumns = @JoinColumn(name = "utilisateur_id"),
@@ -58,7 +50,7 @@ public class Utilisateur {
   // @JsonManagedReference
     private List<Role> listeRoles;
     @ManyToOne (cascade = {
-            CascadeType.MERGE,CascadeType.PERSIST
+            CascadeType.PERSIST,CascadeType.MERGE
     },fetch=FetchType.EAGER)
 
     private Service service;

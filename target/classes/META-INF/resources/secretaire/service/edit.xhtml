@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:sec="http://www.springframework.org/security/tags" xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+  <!--HEADER CSS-->
+  <ui:insert name = "header" >
+    <ui:include src = "/fragments/header.xhtml" />
+  </ui:insert>
+  <!--HEADER CSS-->
+</h:head>
+
+<h:body>
+  <!--NAV-->
+  <ui:insert name = "nav" >
+    <ui:include src = "/fragments/nav.xhtml" />
+  </ui:insert>
+  <!--NAV-->
+
+
+
+  <div class="container" style="margin-top: 50px">
+    <h:form>
+      <p:panel header="Ajouter service">
+        <h:panelGrid columns="2" cellpadding="4">
+
+          <h:outputText value="Nom du service " />
+          <p:inputText value="#{serviceController.service.libelle}" id="libele" />
+          <h:inputHidden value="#{serviceController.service.id}" id="id" />
+          <p:commandButton value="Mettre a jour" action="#{serviceController.saveService}" />
+        </h:panelGrid>
+      </p:panel>
+    </h:form>
+  </div>
+
+  <!--FOOTER JS-->
+  <ui:insert name = "footer" >
+    <ui:include src = "/fragments/footer.xhtml" />
+  </ui:insert>
+  <!--FOOTER JS-->
+</h:body>
+</html>

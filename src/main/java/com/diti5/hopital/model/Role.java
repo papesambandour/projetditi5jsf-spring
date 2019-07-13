@@ -15,8 +15,8 @@ public class Role {
 	@Column(length=50)
 	private String libelle;
 	@ManyToMany(mappedBy = "listeRoles",cascade = {
-			CascadeType.MERGE
-	},fetch=FetchType.EAGER)
+			CascadeType.PERSIST,CascadeType.MERGE
+	},fetch=FetchType.LAZY)
 	//@JsonManagedReference
 	@JsonIgnore
 	private List<Utilisateur> listeUtilisateurs;

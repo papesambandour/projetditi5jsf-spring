@@ -41,9 +41,21 @@ public class ConsultationController {
 
   public String update(){
     try {
-        consultation.setService(serviceDOA.findById(consultation.getService().getId()).get());
-        consultationDAO.save(consultation);
-        return "/admin/consultation/index?faces-redirect=true&succes=true";
+        Consultation tmpConsult = consultationDAO.findById(consultation.getId()).get();
+        tmpConsult.setService(serviceDOA.findById(consultation.getService().getId()).get());
+        tmpConsult.setPatient(patientDAO.findById(consultation.getPatient().getId()).get());
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        Object o = auth.getName();
+        String p=o.toString();
+        Utilisateur u = utilisateurDAO.findByUsername(p);
+        tmpConsult.setUtilisateur(u);
+        tmpConsult.setDateConsultation(consultation.getDateConsultation());
+        tmpConsult.setCommentaire(consultation.getCommentaire());
+        tmpConsult.setPrescription(consultation.getPrescription());
+        tmpConsult.setState(consultation.getState());
+        consultationDAO.save(tmpConsult);
+        init();
+        return "/admin/consultation/index?faces-redirect=true&success=true";
     }catch (Exception e)
     {
       System.out.println(e.getMessage());
@@ -53,16 +65,18 @@ public class ConsultationController {
   public String save(){
     try {
         consultation.setService(serviceDOA.findById(consultation.getService().getId()).get());
+        consultation.setPatient(patientDAO.findById(consultation.getPatient().getId()).get());
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         Object o = auth.getName();
         String p=o.toString();
         Utilisateur u = utilisateurDAO.findByUsername(p);
         consultation.setUtilisateur(u);
         consultationDAO.save(consultation);
-        return "/admin/consultation/index?faces-redirect=true&succes=true";
+        init();
+        return "/admin/consultation/index?faces-redirect=true&success=true";
     }catch (Exception e)
     {
-      System.out.println(e.getMessage());
+      System.out.println("________"+e.getMessage());
       return "/admin/consultation/index?faces-redirect=true&error=true";
     }
   }
