@@ -27,39 +27,16 @@
 
   <div class="container" style="margin-top: 50px">
     <p:button value="Patients" onclick="window.location.href='/admin/patient/index.xhtml';return false" />
-    <h1>L'historique des consultations du patient :  <h:outputLabel value="#{patientController.patient.prenom} #{patientController.patient.nom} " /> </h1>
-    <p:dataTable var="consultation" value="#{patientController.consultations}">
+    <h1>Les Antecedant du patient :  <h:outputLabel value="#{patientController.patient.prenom} #{patientController.patient.nom} " /> </h1>
+    <p:dataTable var="consultation" value="#{patientController.consultationsAntecedant}">
 
       <p:column headerText="Date">
         <h:outputText value="#{consultation.dateConsultation}" />
       </p:column>
 
-      <p:column headerText="Prescription">
-        <h:outputText value="#{consultation.prescription}" />
-      </p:column>
-
       <p:column headerText="Commentaire">
         <h:outputText value="#{consultation.commentaire}" />
       </p:column>
-      <p:column headerText="Service">
-        <h:outputText value="#{consultation.service.libelle}" />
-      </p:column>
-      <p:column headerText="Medecin">
-        <h:outputText value="#{consultation.utilisateur.prenom} #{consultation.utilisateur.nom}" />
-      </p:column>
-      <p:column headerText="Etat">
-        <h:outputText value="#{consultation.state}" />
-      </p:column>
-
-      <p:column>
-        <f:facet name = "header">Action</f:facet>
-        <h:form  >
-          <h:commandButton title="Editer" rendered='#{ consultation.state eq "Demarer"}' style="margin: 5px" styleClass="btn btn-warning btn-sm" action="#{consultationController.edit(consultation)}"  value="Edit."/>
-          <h:commandButton title="Supprimer" rendered='#{ consultation.state eq "Demarer"}' style="margin: 5px" styleClass="btn btn-danger btn-sm" action="#{consultationController.delete(consultation)}"  value="Supp."/>
-        </h:form>
-      </p:column>
-
-
 
     </p:dataTable>
 

@@ -9,11 +9,14 @@ import org.springframework.security.core.context.SecurityContextHolder;
 
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.RequestScoped;
+import javax.faces.bean.SessionScoped;
 import javax.inject.Named;
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Named
-@RequestScoped
+@SessionScoped
 public class ConsultationController {
   @Autowired
   private ConsultationDAO consultationDAO;
@@ -28,6 +31,8 @@ public class ConsultationController {
   private List<Patient> patients ;
   private List<Service> services ;
   private List<Consultation> consultations ;
+  private List<Consultation> consultationsRecherches ;
+  private Date dateRecherche ;
   @PostConstruct
   public void init(){
       consultation = new Consultation();
@@ -82,8 +87,74 @@ public class ConsultationController {
   }
  public String edit(Consultation consultation){
     try {
+       //init();
       this.consultation = consultation ;
       return "/admin/consultation/edit";
+    }catch (Exception e)
+    {
+      System.out.println(e.getMessage());
+      return "/admin/consultation/index?faces-redirect=true&error=true";
+    }
+  }
+ public String goRechereche(){
+    try {
+        dateRecherche = new Date();
+       this.consultationsRecherches = new ArrayList<>();
+      return "/admin/consultation/recherche";
+    }catch (Exception e)
+    {
+      System.out.println(e.getMessage());
+      return "/admin/consultation/index?faces-redirect=true&error=true";
+    }
+  }
+ public String goRecherecheP(){
+    try {
+        dateRecherche = new Date();
+       this.consultationsRecherches = new ArrayList<>();
+      return "/admin/consultation/rechercheByPatient";
+    }catch (Exception e)
+    {
+      System.out.println(e.getMessage());
+      return "/admin/consultation/index?faces-redirect=true&error=true";
+    }
+  }
+ public String goRecherechePJ(){
+    try {
+        dateRecherche = new Date();
+       this.consultationsRecherches = new ArrayList<>();
+      return "/admin/consultation/rechercheByPatientAndDay";
+    }catch (Exception e)
+    {
+      System.out.println(e.getMessage());
+      return "/admin/consultation/index?faces-redirect=true&error=true";
+    }
+  }
+ public String Rechereche(){
+    try {
+      //  init();
+      this.consultationsRecherches = consultationDAO.findByDateConsultation(this.dateRecherche);
+      return "/admin/consultation/recherche";
+    }catch (Exception e)
+    {
+      System.out.println(e.getMessage());
+      return "/admin/consultation/index?faces-redirect=true&error=true";
+    }
+  }
+ public String RecherecheP(){
+    try {
+      this.consultationsRecherches = consultationDAO.findByPatient(patientDAO.findById(consultation.getPatient().getId()).get());
+      return "/admin/consultation/rechercheByPatient";
+    }catch (Exception e)
+    {
+      System.out.println(e.getMessage());
+      return "/admin/consultation/index?faces-redirect=true&error=true";
+    }
+  }
+ public String RecherechePJ(){
+    try {
+      this.consultationsRecherches = consultationDAO.findByDateConsultationAndPatient
+              (dateRecherche,patientDAO.findById(consultation.getPatient().getId()).get());
+      return "/admin/consultation/rechercheByPatientAndDay";
     }catch (Exception e)
     {
       System.out.println(e.getMessage());
@@ -93,7 +164,7 @@ public class ConsultationController {
  public String delete(Consultation consultation){
     try {
       consultationDAO.delete(consultation);
-      init();
+     // init();
       return "/admin/consultation/index?faces-redirect=tru&success=true";
     }catch (Exception e)
     {
@@ -133,4 +204,22 @@ public class ConsultationController {
     public void setConsultations(List<Consultation> consultations) {
         this.consultations = consultations;
     }
+
+    public Date getDateRecherche() {
+        return dateRecherche;
+    }
+
+    public void setDateRecherche(Date dateRecherche) {
+        this.dateRecherche = dateRecherche;
+    }
+
+    public List<Consultation> getConsultationsRecherches() {
+        return consultationsRecherches;
+    }
+
+    public void setConsultationsRecherches(List<Consultation> consultationsRecherches) {
+        this.consultationsRecherches = consultationsRecherches;
+    }
+
+
 }

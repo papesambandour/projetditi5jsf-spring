@@ -115,7 +115,12 @@
             </c:if>
         </div>
         <hr/>
-
+        <h:form >
+        <p:commandButton value="Recherche par jour" action="#{consultationController.goRechereche}" />
+        <p:commandButton value="Recherche par Patient" action="#{consultationController.goRecherecheP}" />
+        <p:commandButton value="Recherche par Patient et par jour" action="#{consultationController.goRecherechePJ}" />
+        </h:form>
+        <hr />
         <p:dataTable var="consultation" value="#{consultationController.consultations}">
 
           <p:column headerText="Date">
@@ -142,8 +147,10 @@
         <p:column>
             <f:facet name = "header">Action</f:facet>
             <h:form >
-                <h:commandButton style="margin: 5px" styleClass="btn btn-warning btn-sm" action="#{consultationController.edit(consultation)}"  value="Editer"/>
-                <h:commandButton style="margin: 5px" styleClass="btn btn-danger btn-sm" action="#{consultationController.delete(consultation)}"  value="Supprimer"/>
+                <h:commandButton title="Editer" style="margin: 5px" styleClass="btn btn-warning btn-sm" action="#{consultationController.edit(consultation)}"  value="Edit"/>
+                <h:commandButton title="Supprimer" style="margin: 5px" styleClass="btn btn-danger btn-sm" action="#{consultationController.delete(consultation)}"  value="Supp"/>
+                <h:commandButton title="Ordonnance" style="margin: 5px" styleClass="btn btn-danger btn-sm" action="#{consultationController.delete(consultation)}"  value="Ordo"/>
+                <h:commandButton title="Diagnostique" style="margin: 5px" styleClass="btn btn-danger btn-sm" action="#{consultationController.delete(consultation)}"  value="Diag"/>
             </h:form>
         </p:column>
 

@@ -121,9 +121,10 @@
 
       <p:column headerText="Action">
         <h:form>
-          <h:commandButton style="margin: 5px" styleClass="btn btn-warning btn-sm" action="#{patientController.edit(patient)}"  value="Edit"/>
-          <h:commandButton style="margin: 5px" styleClass="btn btn-danger btn-sm" action="#{patientController.delete(patient)}"  value="Supp"/>
-          <h:commandButton style="margin: 5px" styleClass="btn btn-success btn-sm" action="#{patientController.consultation(patient)}"  value="Consultation"/>
+          <h:commandButton title="Editer" style="margin: 5px" styleClass="btn btn-warning btn-sm" action="#{patientController.edit(patient)}"  value="Edit."/>
+          <h:commandButton title="Supprimer" style="margin: 5px" styleClass="btn btn-danger btn-sm" action="#{patientController.delete(patient)}"  value="Supp."/>
+          <h:commandButton title="Historique" style="margin: 5px" styleClass="btn btn-success btn-sm" action="#{patientController.consultationP(patient)}"  value="Hist."/>
+          <h:commandButton title="Antecedans" style="margin: 5px" styleClass="btn btn-success btn-sm" action="#{patientController.antecedant(patient)}"  value="Antec."/>
         </h:form>
       </p:column>
     </p:dataTable>
