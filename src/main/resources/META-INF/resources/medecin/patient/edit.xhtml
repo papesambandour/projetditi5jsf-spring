@@ -10,7 +10,7 @@
 
   <!--HEADER CSS-->
   <ui:insert name = "header" >
-    <ui:include src = "/fragments/header.xhtml" />
+    <ui:include src = "/fragments/medecin/header.xhtml" />
   </ui:insert>
   <!--HEADER CSS-->
 </h:head>
@@ -18,7 +18,7 @@
 <h:body>
   <!--NAV-->
   <ui:insert name = "nav" >
-    <ui:include src = "/fragments/nav.xhtml" />
+    <ui:include src = "/fragments/medecin/nav.xhtml" />
   </ui:insert>
   <!--NAV-->
 
@@ -28,16 +28,16 @@
     <h:form styleClass="form" style="margin: auto; width: 80%; padding: 10px; border-radius: 15px 0px 15px 0px ">
       <div class="row">
         <div class="form-group row col-sm-6 ">
-          <h:inputHidden value="#{patientController.patient.id}" id="id" />
+          <h:inputHidden value="#{MPatientController.patient.id}" id="id" />
           <label for="prenom" class="col-4 col-form-label">Prenom</label>
           <div class="col-8">
-            <h:inputText id="prenom" required="true" value="#{patientController.patient.prenom}" a:placeholder="Prenom"  styleClass="form-control" />
+            <h:inputText id="prenom" required="true" value="#{MPatientController.patient.prenom}" a:placeholder="Prenom"  styleClass="form-control" />
           </div>
         </div>
         <div  class="form-group row col-sm-6 ">
           <label for="nom" class="col-sm-4 col-form-label">Nom</label>
           <div class="col-sm-8">
-            <h:inputText id="nom" required="true" value="#{patientController.patient.nom}" a:placeholder="Nom"  styleClass="form-control" />
+            <h:inputText id="nom" required="true" value="#{MPatientController.patient.nom}" a:placeholder="Nom"  styleClass="form-control" />
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@
           <div class="col-sm-8">
             <p:calendar id="dateNaiss" showOn="button" navigator="true"
                         pattern="dd/MM/yyyy" buttonTabindex="-1" type="tel"
-                        mask="99/99/?9999" placeholder="__/__/____" value="#{patientController.patient.dateNaiss}" >
+                        mask="99/99/?9999" placeholder="__/__/____" value="#{MPatientController.patient.dateNaiss}" >
               <f:convertDateTime type="date"  dateStyle="short" pattern="dd/MM/yyyy" />
             </p:calendar>
 
@@ -56,7 +56,7 @@
         <div  class="form-group row col-sm-6 ">
           <label for="tel" class="col-sm-4 col-form-label">Telephone</label>
           <div class="col-sm-8">
-            <h:inputText id="tel" required="true" value="#{patientController.patient.tel}" a:placeholder="Telephone"  styleClass="form-control" />
+            <h:inputText id="tel" required="true" value="#{MPatientController.patient.tel}" a:placeholder="Telephone"  styleClass="form-control" />
           </div>
         </div>
       </div>
@@ -64,13 +64,13 @@
         <div  class="form-group row col-sm-6 ">
           <label for="numDossier" class="col-sm-4 col-form-label">Numero Dossier</label>
           <div class="col-sm-8">
-            <h:inputText id="numDossier" required="true" value="#{patientController.patient.numDossier}" a:placeholder="Numero Dossier"  styleClass="form-control" />
+            <h:inputText id="numDossier" required="true" value="#{MPatientController.patient.numDossier}" a:placeholder="Numero Dossier"  styleClass="form-control" />
           </div>
         </div>
       </div>
 
       <div class="row text-center" style="width: 100% ; margin: auto">
-        <p:commandButton value="Mise a jour patient" action="#{patientController.save}" styleClass="btn btn-primary" style="margin: auto"  />
+        <p:commandButton value="Mise a jour patient" action="#{MPatientController.save}" styleClass="btn btn-primary" style="margin: auto"  />
       </div>
 
     </h:form>
@@ -78,7 +78,7 @@
 
   <!--FOOTER JS-->
   <ui:insert name = "footer" >
-    <ui:include src = "/fragments/footer.xhtml" />
+    <ui:include src = "/fragments/medecin/footer.xhtml" />
   </ui:insert>
   <!--FOOTER JS-->
 </h:body>

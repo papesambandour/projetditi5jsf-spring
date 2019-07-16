@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:sec="http://www.springframework.org/security/tags" xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+
+  <!--HEADER CSS-->
+  <ui:insert name = "header" >
+    <ui:include src = "/fragments/admin/header.xhtml" />
+  </ui:insert>
+  <!--HEADER CSS-->
+</h:head>
+
+<h:body style='background: url("/static/img/forbiden.png") fixed center; background-size:cover '>
+
+
+
+  <div class="container" style="margin-top: 50px">
+    <h1 class="h1 text-center text-dark">Acces non authorise</h1>
+  </div>
+
+  <!--FOOTER JS-->
+  <ui:insert name = "footer" >
+    <ui:include src = "/fragments/admin/footer.xhtml" />
+  </ui:insert>
+  <!--FOOTER JS-->
+</h:body>
+</html>

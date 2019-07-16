@@ -10,7 +10,7 @@
 
     <!--HEADER CSS-->
     <ui:insert name = "header" >
-        <ui:include src = "/fragments/header.xhtml" />
+        <ui:include src = "/fragments/admin/header.xhtml" />
     </ui:insert>
     <!--HEADER CSS-->
 </h:head>
@@ -18,7 +18,7 @@
 <h:body>
     <!--NAV-->
     <ui:insert name = "nav" >
-        <ui:include src = "/fragments/nav.xhtml" />
+        <ui:include src = "/fragments/admin/nav.xhtml" />
     </ui:insert>
     <!--NAV-->
 
@@ -43,7 +43,7 @@
                 <div  class="form-group row col-sm-6 ">
                     <label for="service" class="col-sm-4 col-form-label">Service</label>
                     <div class="col-sm-8">
-                        <h:selectOneMenu id="service" value="#{consultationController.consultation.service.id}"  label="Service:" colMd="3" labelColMd="2" required="true">
+                        <h:selectOneMenu id="service" value="#{consultationController.consultation.service.id}" label="Service:" colMd="3" labelColMd="2" required="true">
                             <f:selectItem itemLabel="Séléctionner un service" itemValue=""  itemDisabled="true"/>
                             <f:selectItems value="#{consultationController.services}" var="service" itemLabel="#{service.libelle}" itemValue="#{service.id}" />
                         </h:selectOneMenu>
@@ -55,7 +55,7 @@
                 <div  class="form-group row col-sm-6 ">
                     <label for="patient" class="col-sm-4 col-form-label">Patient</label>
                     <div class="col-sm-8">
-                        <h:selectOneMenu id="patient" value="#{consultationController.consultation.patient.id}"  label="Patient:" colMd="3" labelColMd="2" required="true">
+                        <h:selectOneMenu id="patient" value="#{consultationController.consultation.patient.id}" label="Patient:" colMd="3" labelColMd="2" required="true">
                             <f:selectItem itemLabel="Séléctionner un patient" itemValue=""  itemDisabled="true"/>
                             <f:selectItems value="#{consultationController.patients}" var="patient" itemLabel="#{patient.prenom} #{patient.nom}" itemValue="#{patient.id}" />
                         </h:selectOneMenu>
@@ -84,7 +84,7 @@
                 <div  class="form-group row col-sm-12">
                     <label for="commentaire" class="col-sm-2 col-form-label">Commentaire</label>
                     <div class="col-sm-10">
-                        <b:inputTextarea id="commentaire"  value="#{consultationController.consultation.commentaire}" label="Commentaire:" colMd="6" labelColMd="2" />
+                        <b:inputTextarea id="commentaire" value="#{consultationController.consultation.commentaire}" label="Commentaire:" colMd="6" labelColMd="2" />
                     </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@
 
     <!--FOOTER JS-->
     <ui:insert name = "footer" >
-        <ui:include src = "/fragments/footer.xhtml" />
+        <ui:include src = "/fragments/admin/footer.xhtml" />
     </ui:insert>
     <!--FOOTER JS-->
 </h:body>

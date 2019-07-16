@@ -1,0 +1,37 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:sec="http://www.springframework.org/security/tags" xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+
+
+</h:head>
+<h:body>
+
+    <ui:composition>
+        <p:dock position="bottom">
+            <p:menuitem value="Accueil" icon="/static/img/home.png" url="/medecin/dashbord.xhtml"/>
+            <p:menuitem value="Patients" icon="/static/img/patient.png" url="/medecin/patient/index.xhtml"/>
+            <p:menuitem value="Consultation" icon="/static/img/consultation.png" url="/medecin/consultation/index.xhtml"/>
+
+        </p:dock>
+
+        <!--head-->
+        <p:panel header="Hospital Application" style="margin: auto;">
+            <h:panelGrid columns="10" cellpadding="4" style="text-align: center;margin: auto">
+                <p:button value="Accueil" onclick="window.location.href='/medecin/dashbord.xhtml';return false" />
+                <p:button value="Patients" onclick="window.location.href='/medecin/patient/index.xhtml';return false" />
+                <p:button value="Consultation" onclick="window.location.href='/medecin/consultation/index.xhtml';return false" />
+                <p:button value="Profil" onclick="window.location.href='/medecin/profil/index.xhtml';return false" />
+                <p:button style="background: red;color: white" value="Decoonexion" onclick="window.location.href='/logout';return false" />
+            </h:panelGrid>
+        </p:panel>
+        <!--head-->
+    </ui:composition>
+
+</h:body>
+</html>

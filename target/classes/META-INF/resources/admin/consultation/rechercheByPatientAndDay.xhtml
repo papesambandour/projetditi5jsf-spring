@@ -11,7 +11,7 @@
 
     <!--HEADER CSS-->
     <ui:insert name = "header" >
-        <ui:include src = "/fragments/header.xhtml" />
+        <ui:include src = "/fragments/admin/header.xhtml" />
     </ui:insert>
     <!--HEADER CSS-->
 </h:head>
@@ -19,7 +19,7 @@
 <h:body>
     <!--NAV-->
     <ui:insert name = "nav" >
-        <ui:include src = "/fragments/nav.xhtml" />
+        <ui:include src = "/fragments/admin/nav.xhtml" />
     </ui:insert>
     <!--NAV-->
 
@@ -46,7 +46,7 @@
                 <div  class="form-group row col-sm-12 ">
                     <label for="patient" class="col-sm-4 col-form-label">Patient</label>
                     <div class="col-sm-8">
-                        <h:selectOneMenu id="patient" value="#{consultationController.consultation.patient.id}"  label="Patient:" colMd="3" labelColMd="2" required="true">
+                        <h:selectOneMenu id="patient" value="#{consultationController.consultation.patient.id}" label="Patient:" colMd="3" labelColMd="2" required="true">
                             <f:selectItem itemLabel="Séléctionner un patient" itemValue=""  itemDisabled="true"/>
                             <f:selectItems value="#{consultationController.patients}" var="patient" itemLabel="#{patient.prenom} #{patient.nom}" itemValue="#{patient.id}" />
                         </h:selectOneMenu>
@@ -102,6 +102,9 @@
           <p:column headerText="Medecin">
             <h:outputText value="#{consultation.utilisateur.prenom} #{consultation.utilisateur.nom}" />
           </p:column>
+            <p:column headerText="Patient">
+                <h:outputText value="#{consultation.patient.prenom} #{consultation.patient.nom}" />
+            </p:column>
           <p:column headerText="Etat">
             <h:outputText value="#{consultation.state}" />
           </p:column>
@@ -109,8 +112,8 @@
         <p:column>
             <f:facet name = "header">Action</f:facet>
             <h:form >
-                <h:commandButton style="margin: 5px" styleClass="btn btn-warning btn-sm" action="#{consultationController.edit(consultation)}"  value="Editer"/>
-                <h:commandButton style="margin: 5px" styleClass="btn btn-danger btn-sm" action="#{consultationController.delete(consultation)}"  value="Supprimer"/>
+                <h:commandButton style="margin: 5px" styleClass="btn btn-warning btn-sm" action="#{consultationController.edit(consultation)}" value="Editer"/>
+                <h:commandButton style="margin: 5px" styleClass="btn btn-danger btn-sm" action="#{consultationController.delete(consultation)}" value="Supprimer"/>
             </h:form>
         </p:column>
 
@@ -119,7 +122,7 @@
 
     <!--FOOTER JS-->
     <ui:insert name = "footer" >
-        <ui:include src = "/fragments/footer.xhtml" />
+        <ui:include src = "/fragments/admin/footer.xhtml" />
     </ui:insert>
     <!--FOOTER JS-->
 </h:body>

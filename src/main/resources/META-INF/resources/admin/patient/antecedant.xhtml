@@ -11,7 +11,7 @@
 
   <!--HEADER CSS-->
   <ui:insert name = "header" >
-    <ui:include src = "/fragments/header.xhtml" />
+    <ui:include src = "/fragments/admin/header.xhtml" />
   </ui:insert>
   <!--HEADER CSS-->
 </h:head>
@@ -19,14 +19,14 @@
 <h:body>
   <!--NAV-->
   <ui:insert name = "nav" >
-    <ui:include src = "/fragments/nav.xhtml" />
+    <ui:include src = "/fragments/admin/nav.xhtml" />
   </ui:insert>
   <!--NAV-->
 
 
 
   <div class="container" style="margin-top: 50px">
-    <p:button value="Patients" onclick="window.location.href='/admin/patient/index.xhtml';return false" />
+    <p:button value="Patients" onclick="window.location.href='/medecin/patient/index.xhtml';return false" />
     <h1>Les Antecedant du patient :  <h:outputLabel value="#{patientController.patient.prenom} #{patientController.patient.nom} " /> </h1>
     <p:dataTable var="consultation" value="#{patientController.consultationsAntecedant}">
 
@@ -44,7 +44,7 @@
 
   <!--FOOTER JS-->
   <ui:insert name = "footer" >
-    <ui:include src = "/fragments/footer.xhtml" />
+    <ui:include src = "/fragments/admin/footer.xhtml" />
   </ui:insert>
   <!--FOOTER JS-->
 </h:body>

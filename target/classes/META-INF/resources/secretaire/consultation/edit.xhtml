@@ -10,7 +10,7 @@
 
     <!--HEADER CSS-->
     <ui:insert name = "header" >
-        <ui:include src = "/fragments/header.xhtml" />
+        <ui:include src = "/fragments/admin/header.xhtml" />
     </ui:insert>
     <!--HEADER CSS-->
 </h:head>
@@ -18,7 +18,7 @@
 <h:body>
     <!--NAV-->
     <ui:insert name = "nav" >
-        <ui:include src = "/fragments/nav.xhtml" />
+        <ui:include src = "/fragments/admin/nav.xhtml" />
     </ui:insert>
     <!--NAV-->
 
@@ -29,25 +29,25 @@
             <b:form id="add" horizontal="true" styleClass="form" style="margin: auto; width: 80%; padding: 10px; border-radius: 15px 0px 15px 0px ">
 
 
-                <h:inputHidden value="#{consultationController.consultation.id}" />
-                <h:selectOneMenu value="#{consultationController.consultation.service.id}"  label="Service:" colMd="3" labelColMd="2" required="true">
+                <h:inputHidden value="#{MConsultationController.consultation.id}" />
+                <h:selectOneMenu value="#{MConsultationController.consultation.service.id}" label="Service:" colMd="3" labelColMd="2" required="true">
                     <f:selectItem itemLabel="Séléctionner un service" itemValue="" />
-                    <f:selectItems value="#{consultationController.services}" var="service" itemLabel="#{service.libelle}" itemValue="#{service.id}" />
+                    <f:selectItems value="#{MConsultationController.services}" var="service" itemLabel="#{service.libelle}" itemValue="#{service.id}" />
                 </h:selectOneMenu>
-                <h:selectOneMenu value="#{consultationController.consultation.patient.id}"  label="Patient:" colMd="3" labelColMd="2" required="true">
+                <h:selectOneMenu value="#{MConsultationController.consultation.patient.id}" label="Patient:" colMd="3" labelColMd="2" required="true">
                     <f:selectItem itemLabel="Séléctionner un patient" itemValue="" />
-                    <f:selectItems value="#{consultationController.patients}" var="patient" itemLabel="#{patient.prenom} #{patient.nom}" itemValue="#{patient.id}" />
+                    <f:selectItems value="#{MConsultationController.patients}" var="patient" itemLabel="#{patient.prenom} #{patient.nom}" itemValue="#{patient.id}" />
                 </h:selectOneMenu>
 
                 <p:outputLabel value="DETAILS CONSULTATION" style="font-weight: bold; font-size: large;" />
                 <p:calendar id="dateNaiss" showOn="button" navigator="true"
                             pattern="dd/MM/yyyy" buttonTabindex="-1" type="tel"
-                            mask="99/99/?9999" placeholder="__/__/____" value="#{consultationController.consultation.dateConsultation}" >
+                            mask="99/99/?9999" placeholder="__/__/____" value="#{MConsultationController.consultation.dateConsultation}" >
                     <f:convertDateTime type="date"  dateStyle="short" pattern="dd/MM/yyyy" />
                 </p:calendar>
-                <b:inputTextarea value="#{consultationController.consultation.prescription}" label="Prescription:" colMd="6" labelColMd="2" />
-                <b:inputTextarea  value="#{consultationController.consultation.commentaire}" label="Commentaire:" colMd="6" labelColMd="2" />
-                <b:commandButton value="Enregistrer" look="info" size="lg" actionListener="#{consultationController.update}"/>
+                <b:inputTextarea value="#{MConsultationController.consultation.prescription}" label="Prescription:" colMd="6" labelColMd="2" />
+                <b:inputTextarea value="#{MConsultationController.consultation.commentaire}" label="Commentaire:" colMd="6" labelColMd="2" />
+                <b:commandButton value="Enregistrer" look="info" size="lg" actionListener="#{MConsultationController.update}"/>
             </b:form>
         </b:panel>
 
@@ -56,7 +56,7 @@
 
     <!--FOOTER JS-->
     <ui:insert name = "footer" >
-        <ui:include src = "/fragments/footer.xhtml" />
+        <ui:include src = "/fragments/admin/footer.xhtml" />
     </ui:insert>
     <!--FOOTER JS-->
 </h:body>

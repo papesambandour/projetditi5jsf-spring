@@ -11,7 +11,7 @@
 
     <!--HEADER CSS-->
     <ui:insert name = "header" >
-        <ui:include src = "/fragments/header.xhtml" />
+        <ui:include src = "/fragments/admin/header.xhtml" />
     </ui:insert>
     <!--HEADER CSS-->
 </h:head>
@@ -19,7 +19,7 @@
 <h:body>
     <!--NAV-->
     <ui:insert name = "nav" >
-        <ui:include src = "/fragments/nav.xhtml" />
+        <ui:include src = "/fragments/admin/nav.xhtml" />
     </ui:insert>
     <!--NAV-->
 
@@ -90,6 +90,9 @@
           <p:column headerText="Medecin">
             <h:outputText value="#{consultation.utilisateur.prenom} #{consultation.utilisateur.nom}" />
           </p:column>
+            <p:column headerText="Patient">
+                <h:outputText value="#{consultation.patient.prenom} #{consultation.patient.nom}" />
+            </p:column>
           <p:column headerText="Etat">
             <h:outputText value="#{consultation.state}" />
           </p:column>
@@ -97,8 +100,8 @@
         <p:column>
             <f:facet name = "header">Action</f:facet>
             <h:form >
-                <h:commandButton style="margin: 5px" styleClass="btn btn-warning btn-sm" action="#{consultationController.edit(consultation)}"  value="Editer"/>
-                <h:commandButton style="margin: 5px" styleClass="btn btn-danger btn-sm" action="#{consultationController.delete(consultation)}"  value="Supprimer"/>
+                <h:commandButton style="margin: 5px" styleClass="btn btn-warning btn-sm" action="#{consultationController.edit(consultation)}" value="Editer"/>
+                <h:commandButton style="margin: 5px" styleClass="btn btn-danger btn-sm" action="#{consultationController.delete(consultation)}" value="Supprimer"/>
             </h:form>
         </p:column>
 
@@ -107,7 +110,7 @@
 
     <!--FOOTER JS-->
     <ui:insert name = "footer" >
-        <ui:include src = "/fragments/footer.xhtml" />
+        <ui:include src = "/fragments/admin/footer.xhtml" />
     </ui:insert>
     <!--FOOTER JS-->
 </h:body>

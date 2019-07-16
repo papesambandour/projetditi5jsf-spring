@@ -52,15 +52,26 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         System.out.println("______"+bCryptPasswordEncoder.encode("admin"));
         // require all requests to be authenticated except for the resources
         http.authorizeRequests().antMatchers("/javax.faces.resource/**")
-                .permitAll().anyRequest().authenticated();
+                .permitAll();
+
         // login
         http.formLogin().loginPage("/login.xhtml").permitAll()
-                .failureUrl("/login.xhtml?error=true");
-        // .successHandler(myAuthenticationSuccessHandler());
+                .failureUrl("/login.xhtml?error=true")
+        .successHandler(myAuthenticationSuccessHandler())
+                .and()
+                .exceptionHandling().accessDeniedHandler(accessDeniedHandler);;
+         //role
+        http.authorizeRequests()
+                .antMatchers("/admin/**").hasAnyAuthority("ADMIN")//access("hasRole('ADMIN') or hasRole('ADMIN')")//hasRole("ADMIN")
+                .antMatchers("/medecin/**").hasAnyAuthority("MEDECIN")
+                .antMatchers("/secretaire/**").hasAnyAuthority("SECRETAIRE")
+                .anyRequest()
+                .authenticated();
         // logout
         http.logout().logoutSuccessUrl("/login.xhtml");
         // not needed as JSF 2.2 is implicitly protected against CSRF
         http.csrf().disable();
+
     }
 
     @Override

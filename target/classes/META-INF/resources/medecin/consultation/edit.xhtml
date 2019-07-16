@@ -10,7 +10,7 @@
 
     <!--HEADER CSS-->
     <ui:insert name = "header" >
-        <ui:include src = "/fragments/header.xhtml" />
+        <ui:include src = "/fragments/medecin/header.xhtml" />
     </ui:insert>
     <!--HEADER CSS-->
 </h:head>
@@ -18,45 +18,89 @@
 <h:body>
     <!--NAV-->
     <ui:insert name = "nav" >
-        <ui:include src = "/fragments/nav.xhtml" />
+        <ui:include src = "/fragments/medecin/nav.xhtml" />
     </ui:insert>
     <!--NAV-->
 
 
 
     <div class="container" style="margin-top: 50px">
-        <b:panel title="Fiche Consultation" look="success">
-            <b:form id="add" horizontal="true" styleClass="form" style="margin: auto; width: 80%; padding: 10px; border-radius: 15px 0px 15px 0px ">
+        <h:form id="frmAddConsultation" styleClass="form" style="margin: auto; width: 80%; padding: 10px; border-radius: 15px 0px 15px 0px ">
+            <div class="row">
+                <div class="form-group row col-sm-6 ">
+                    <label for="state" class="col-4 col-form-label">Etat</label>
+                    <div class="col-8">
+                        <h:inputHidden value="#{MConsultationController.consultation.id}" id="id" />
+                        <h:selectOneMenu value="#{MConsultationController.consultation.state}" required="true" id="state" styleClass="form-control" >
+                            <f:selectItem itemValue="" itemDisabled="true" itemLabel="---Choisir---"/>
+                            <f:selectItem itemValue="Demarer" itemLabel="Demarer"/>
+                            <f:selectItem itemValue="Terminer" itemLabel="Terminer"/>
+                            <f:selectItem itemValue="Annuler" itemLabel="Annuler"/>
+                        </h:selectOneMenu>
+                    </div>
+                </div>
 
+                <div  class="form-group row col-sm-6 ">
+                    <label for="service" class="col-sm-4 col-form-label">Service</label>
+                    <div class="col-sm-8">
+                        <h:selectOneMenu id="service" value="#{MConsultationController.consultation.service.id}" label="Service:" colMd="3" labelColMd="2" required="true">
+                            <f:selectItem itemLabel="Séléctionner un service" itemValue=""  itemDisabled="true"/>
+                            <f:selectItems value="#{MConsultationController.services}" var="service" itemLabel="#{service.libelle}" itemValue="#{service.id}" />
+                        </h:selectOneMenu>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
 
-                <h:inputHidden value="#{consultationController.consultation.id}" />
-                <h:selectOneMenu value="#{consultationController.consultation.service.id}"  label="Service:" colMd="3" labelColMd="2" required="true">
-                    <f:selectItem itemLabel="Séléctionner un service" itemValue="" />
-                    <f:selectItems value="#{consultationController.services}" var="service" itemLabel="#{service.libelle}" itemValue="#{service.id}" />
-                </h:selectOneMenu>
-                <h:selectOneMenu value="#{consultationController.consultation.patient.id}"  label="Patient:" colMd="3" labelColMd="2" required="true">
-                    <f:selectItem itemLabel="Séléctionner un patient" itemValue="" />
-                    <f:selectItems value="#{consultationController.patients}" var="patient" itemLabel="#{patient.prenom} #{patient.nom}" itemValue="#{patient.id}" />
-                </h:selectOneMenu>
+                <div  class="form-group row col-sm-6 ">
+                    <label for="patient" class="col-sm-4 col-form-label">Patient</label>
+                    <div class="col-sm-8">
+                        <h:selectOneMenu id="patient" value="#{MConsultationController.consultation.patient.id}" label="Patient:" colMd="3" labelColMd="2" required="true">
+                            <f:selectItem itemLabel="Séléctionner un patient" itemValue=""  itemDisabled="true"/>
+                            <f:selectItems value="#{MConsultationController.patients_}" var="patient" itemLabel="#{patient.prenom} #{patient.nom}" itemValue="#{patient.id}" />
+                        </h:selectOneMenu>
+                    </div>
+                </div>
+                <div  class="form-group row col-sm-6 ">
+                    <label for="dateConsultation" class="col-sm-4 col-form-label">Date de consultation</label>
+                    <div class="col-sm-8">
+                        <p:calendar id="dateConsultation" showOn="button" navigator="true"
+                                    pattern="dd/MM/yyyy" buttonTabindex="-1" type="tel"
+                                    mask="99/99/?9999" placeholder="__/__/____" value="#{MConsultationController.consultation.dateConsultation}" >
+                            <f:convertDateTime type="date"  dateStyle="short" pattern="dd/MM/yyyy" />
+                        </p:calendar>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div  class="form-group row col-sm-12">
+                    <label for="prescription" class="col-sm-2 col-form-label">Prescription</label>
+                    <div class="col-sm-10">
+                        <b:inputTextarea id="prescription" value="#{MConsultationController.consultation.prescription}" label="Prescription:" colMd="6" labelColMd="2" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div  class="form-group row col-sm-12">
+                    <label for="commentaire" class="col-sm-2 col-form-label">Commentaire</label>
+                    <div class="col-sm-10">
+                        <b:inputTextarea id="commentaire" value="#{MConsultationController.consultation.commentaire}" label="Commentaire:" colMd="6" labelColMd="2" />
+                    </div>
+                </div>
+            </div>
 
-                <p:outputLabel value="DETAILS CONSULTATION" style="font-weight: bold; font-size: large;" />
-                <p:calendar id="dateNaiss" showOn="button" navigator="true"
-                            pattern="dd/MM/yyyy" buttonTabindex="-1" type="tel"
-                            mask="99/99/?9999" placeholder="__/__/____" value="#{consultationController.consultation.dateConsultation}" >
-                    <f:convertDateTime type="date"  dateStyle="short" pattern="dd/MM/yyyy" />
-                </p:calendar>
-                <b:inputTextarea value="#{consultationController.consultation.prescription}" label="Prescription:" colMd="6" labelColMd="2" />
-                <b:inputTextarea  value="#{consultationController.consultation.commentaire}" label="Commentaire:" colMd="6" labelColMd="2" />
-                <b:commandButton value="Enregistrer" look="info" size="lg" actionListener="#{consultationController.update}"/>
-            </b:form>
-        </b:panel>
+            <div class="row text-center" style="width: 100% ; margin: auto">
+                <p:commandButton value="Mise a jour" action="#{MConsultationController.update}" styleClass="btn btn-primary" style="margin: auto"  />
+            </div>
+
+        </h:form>
 
 
     </div>
 
     <!--FOOTER JS-->
     <ui:insert name = "footer" >
-        <ui:include src = "/fragments/footer.xhtml" />
+        <ui:include src = "/fragments/medecin/footer.xhtml" />
     </ui:insert>
     <!--FOOTER JS-->
 </h:body>
