@@ -1,157 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="863a1de3-a741-44dd-81b3-d6ede8968e8e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/pdfcrowd_4_9_0_javadoc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/medecin/MConsultationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/medecin/MPatientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/medecin/MProfilController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/ordonance.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/fragments/medecin/nav.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/consultation/ordonance.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/consultation/recherche.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/consultation/rechercheByPatient.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/consultation/rechercheByPatientAndDay.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/patient/antecedant.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/patient/consultation.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/profil/index.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/static/img/forbiden.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/consultation/ordonance.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/fragments/admin/footer.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/fragments/admin/header.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/fragments/medecin/footer.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/fragments/medecin/header.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/fragments/medecin/nav.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/consultation/ordonance.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/consultation/recherche.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/consultation/rechercheByPatient.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/consultation/rechercheByPatientAndDay.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/patient/antecedant.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/patient/consultation.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/profil/index.xhtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/static/img/forbiden.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/diti5/hopital/bean/admin/ConsultationController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/diti5/hopital/bean/admin/RoleConverter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/diti5/hopital/bean/medecin/MConsultationController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/diti5/hopital/bean/medecin/MPatientController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/diti5/hopital/bean/medecin/MProfilController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projet-jsf.iml" beforeDir="false" afterPath="$PROJECT_DIR$/projet-jsf.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/ConsultationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/admin/ConsultationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/admin/PatientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/ProfilController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/admin/ProfilController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/admin/RoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/RoleConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/admin/RoleConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/ServiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/admin/ServiceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/bean/admin/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/config/MyAccessDeniedHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/config/MyAccessDeniedHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/config/MySimpleUrlAuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/config/MySimpleUrlAuthenticationSuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/config/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/config/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/dao/ConsultationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/dao/ConsultationDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/dao/PatientDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diti5/hopital/dao/PatientDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/recherche.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/recherche.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/rechercheByPatient.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/rechercheByPatient.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/rechercheByPatientAndDay.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/consultation/rechercheByPatientAndDay.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/dashbord.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/dashbord.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/patient/antecedant.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/patient/antecedant.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/patient/consultation.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/patient/consultation.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/patient/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/patient/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/patient/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/patient/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/profil/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/profil/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/role/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/role/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/role/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/role/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/service/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/service/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/service/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/service/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/utilisateur/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/utilisateur/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/utilisateur/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/admin/utilisateur/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/default.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/default.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/fragments/footer.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/fragments/admin/footer.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/fragments/header.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/fragments/admin/header.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/fragments/nav.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/fragments/admin/nav.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/consultation/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/consultation/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/consultation/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/consultation/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/dashbord.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/dashbord.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/patient/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/patient/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/patient/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/patient/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/role/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/default/error403.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/role/index.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/service/edit.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/service/index.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/utilisateur/edit.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/medecin/utilisateur/index.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/menu.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/consultation/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/consultation/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/consultation/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/consultation/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/dashbord.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/dashbord.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/patient/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/patient/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/patient/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/patient/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/role/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/role/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/role/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/role/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/service/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/service/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/service/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/service/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/utilisateur/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/utilisateur/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/utilisateur/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/secretaire/utilisateur/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/resources/template.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/consultation/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/consultation/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/consultation/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/consultation/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/consultation/recherche.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/consultation/recherche.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/consultation/rechercheByPatient.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/consultation/rechercheByPatient.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/consultation/rechercheByPatientAndDay.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/consultation/rechercheByPatientAndDay.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/dashbord.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/dashbord.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/patient/antecedant.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/patient/antecedant.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/patient/consultation.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/patient/consultation.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/patient/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/patient/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/patient/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/patient/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/profil/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/profil/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/role/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/role/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/role/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/role/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/service/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/service/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/service/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/service/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/utilisateur/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/utilisateur/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/utilisateur/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/admin/utilisateur/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/default.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/default.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/fragments/footer.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/fragments/medecin/footer.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/fragments/header.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/fragments/medecin/header.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/fragments/nav.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/fragments/admin/nav.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/consultation/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/consultation/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/consultation/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/consultation/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/dashbord.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/dashbord.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/patient/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/patient/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/patient/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/patient/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/role/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/resources/default/error403.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/role/index.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/service/edit.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/service/index.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/utilisateur/edit.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/medecin/utilisateur/index.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/menu.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/consultation/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/consultation/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/consultation/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/consultation/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/dashbord.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/dashbord.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/patient/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/patient/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/patient/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/patient/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/role/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/role/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/role/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/role/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/service/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/service/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/service/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/service/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/utilisateur/edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/utilisateur/edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/utilisateur/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/resources/secretaire/utilisateur/index.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/resources/template.xhtml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/diti5/hopital/bean/ConsultationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/diti5/hopital/bean/PatientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/diti5/hopital/bean/admin/PatientController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/diti5/hopital/bean/ProfilController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/diti5/hopital/bean/admin/ProfilController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/diti5/hopital/bean/RoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/diti5/hopital/bean/admin/RoleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/diti5/hopital/bean/RoleConverter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/diti5/hopital/bean/ServiceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/diti5/hopital/bean/admin/ServiceController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/diti5/hopital/bean/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/diti5/hopital/bean/admin/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/diti5/hopital/config/MyAccessDeniedHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/diti5/hopital/config/MyAccessDeniedHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/diti5/hopital/config/MySimpleUrlAuthenticationSuccessHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/diti5/hopital/config/MySimpleUrlAuthenticationSuccessHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/diti5/hopital/config/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/diti5/hopital/config/SecurityConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/diti5/hopital/dao/ConsultationDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/diti5/hopital/dao/ConsultationDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/diti5/hopital/dao/PatientDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/diti5/hopital/dao/PatientDAO.class" afterDir="false" />
-    </list>
+    <list default="true" id="863a1de3-a741-44dd-81b3-d6ede8968e8e" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -514,7 +364,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563245686007" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563245686025" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Libraries" />
@@ -592,18 +442,17 @@
       <workItem from="1563029808926" duration="23299000" />
       <workItem from="1563223382193" duration="795000" />
       <workItem from="1563237481963" duration="177000" />
-      <workItem from="1563237696000" duration="7082000" />
+      <workItem from="1563237696000" duration="7153000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66941000" />
+    <option name="totallyTimeSpent" value="67012000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29828325" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29828325" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -619,7 +468,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.18091698" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.18091698" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32961586" />
